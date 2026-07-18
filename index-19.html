@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Digital Tasbih Counter</title>
+<meta name="theme-color" content="#0d2016">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="stage">
+  <section class="device" aria-label="Digital Tasbih Counter">
+
+    <img
+      class="device__image"
+      src="device.png"
+      alt="Green leather and gold digital tasbih counter device"
+      draggable="false">
+
+    <!-- LCD digit readout, positioned over the display cutout in the image -->
+    <div class="lcd" aria-hidden="false">
+      <span id="counterValue" class="lcd__value" role="status" aria-live="polite" aria-atomic="true"></span>
+    </div>
+
+    <!-- Invisible touch/click regions aligned to the image's physical buttons -->
+    <button type="button" id="btnCount" class="hotspot hotspot--count" aria-label="Count, tap to increase"></button>
+    <button type="button" id="btnReset" class="hotspot hotspot--reset" aria-label="Reset counter to blank"></button>
+    <button type="button" id="btnDelete" class="hotspot hotspot--delete" aria-label="Delete, subtract one"></button>
+
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
